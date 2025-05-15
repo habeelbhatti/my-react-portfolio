@@ -1,0 +1,149 @@
+/* Services.css */
+
+/* Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Services Landing Section */
+.services-container {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.services-landing {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.services-heading {
+  font-size: 3rem;
+  color: #dae3d9; /* Neon Green */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.services-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Services Cards Section */
+.services-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.service-card {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-title {
+  font-size: 1.8rem;
+  color: #ff6347; /* Neon Red */
+  margin-bottom: 20px;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #e2e9e1; /* Neon Green */
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Contact Details Section */
+.contact-details {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  color: #dce6db;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.contact-link {
+  color: #ff6347;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+}
